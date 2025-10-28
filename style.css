@@ -904,5 +904,363 @@ body {
             margin-left: 20px;
         }
     }
+/* ========================================
+   MOBILE RESPONSIVE STYLES - ADD TO END
+   ======================================== */
+
+/* Hamburger Menu - Hidden by default */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 4px 0;
+    background: white;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero-text h1 {
+        font-size: 36px;
+    }
+    
+    .section-header h2,
+    .why-choose-text h2,
+    .welcome-text h2 {
+        font-size: 28px;
+    }
+    
+    .facilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Top Header Mobile */
+    .top-header {
+        font-size: 10px;
+        padding: 5px 0;
+    }
+    
+    .header-info {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-info span {
+        margin: 5px 0;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    /* Main Header Mobile */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .logo-text h1 {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+    
+    .header-links {
+        justify-content: center;
+        gap: 15px;
+        font-size: 14px;
+    }
+    
+    .header-icons {
+        justify-content: center;
+    }
+    
+    .header-icons a {
+        width: 32px;
+        height: 32px;
+    }
+    
+    /* Show Hamburger Menu on Mobile */
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    /* Mobile Navigation */
+    .main-nav {
+        position: relative;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #1E3A8A;
+        z-index: 1000;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+    
+    .nav-menu.mobile-active {
+        display: flex;
+        animation: slideDown 0.3s ease-out;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+    }
+    
+    .nav-menu a {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        text-align: left;
+    }
+    
+    /* Mobile Dropdown */
+    .dropdown-menu {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        background: rgba(255,255,255,0.1);
+        display: none;
+    }
+    
+    .dropdown-menu.mobile-open {
+        display: block;
+    }
+    
+    .dropdown-menu a {
+        padding-left: 40px !important;
+    }
+    
+    /* Hero Section Mobile */
+    .hero-section {
+        padding: 30px 0;
+    }
+    
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .hero-text h3 {
+        font-size: 18px;
+    }
+    
+    .hero-text p {
+        font-size: 15px;
+    }
+    
+    /* Facilities Section Mobile */
+    .facilities-section {
+        padding: 40px 0;
+    }
+    
+    .section-header h2 {
+        font-size: 24px;
+    }
+    
+    .section-header p {
+        font-size: 15px;
+    }
+    
+    .facilities-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .facility-card h3 {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+    
+    /* Why Choose Section Mobile */
+    .why-choose-section {
+        padding: 40px 0;
+    }
+    
+    .why-choose-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .why-choose-text {
+        text-align: center;
+    }
+    
+    .why-choose-text h2 {
+        font-size: 24px;
+    }
+    
+    .feature-item {
+        justify-content: center;
+    }
+    
+    .apply-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Welcome Section Mobile */
+    .welcome-section {
+        padding: 40px 0;
+    }
+    
+    .welcome-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .welcome-text {
+        text-align: center;
+    }
+    
+    .welcome-text h2 {
+        font-size: 24px;
+    }
+    
+    .welcome-text p {
+        font-size: 15px;
+    }
+    
+    /* Footer Mobile */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .footer-section ul {
+        text-align: center;
+    }
+    
+    .contact-item {
+        justify-content: center;
+        text-align: left;
+    }
+    
+    .footer-social-wrapper {
+        gap: 20px;
+    }
+    
+    .footer-social i {
+        font-size: 24px;
+    }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .logo-text h1 {
+        font-size: 18px;
+    }
+    
+    .hero-text h1 {
+        font-size: 24px;
+    }
+    
+    .section-header h2,
+    .why-choose-text h2,
+    .welcome-text h2 {
+        font-size: 22px;
+    }
+    
+    .header-links {
+        gap: 10px;
+        font-size: 12px;
+    }
+    
+    .apply-btn {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+    
+    .facility-card h3 {
+        font-size: 15px;
+    }
+    
+    .made-with-love {
+        font-size: 13px;
+    }
+}
+
+/* Smooth scroll for all devices */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll */
+body {
+    overflow-x: hidden;
+}
 
     
