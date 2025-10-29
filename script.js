@@ -217,7 +217,7 @@ function initializeButtons() {
     if (applyBtn) {
         applyBtn.addEventListener('click', e => {
             e.preventDefault();
-            showCustomAlert('To Apply for Admission, Please visit our School Campus at H.No. 317/12, Hans Enclave, Near Rajiv Chowk, Gurugram, Haryana');
+            showCustomAlert('To Apply for Admission, Please visit our School Campus at Plot 317/12, Hans Enclave, Near Rajiv Chowk, Gurugram, Haryana');
         });
     }
     
@@ -460,3 +460,4 @@ styles.textContent = `
     }
 `;
 document.head.appendChild(styles);
+
